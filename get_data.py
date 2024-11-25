@@ -33,6 +33,9 @@ def fetch_ranking(player, team):
             if len(cells) >= 5 and cells[4].text.strip()[:5] in team:
                 player_row = row
                 break
+            elif len(cells) >= 5 and player == 'Häggström, Axel' and cells[4].text.strip() == 'Norrtulls SK':
+                player_row = row
+                break
 
         # Extract ranking points
         if player_row:
